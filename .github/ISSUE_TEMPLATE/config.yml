@@ -1,0 +1,2 @@
+# Keep blank issues enabled so the app's prefilled "?title=&body=" links still work.
+blank_issues_enabled: true

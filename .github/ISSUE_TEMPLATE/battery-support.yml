@@ -1,0 +1,52 @@
+name: Battery support request
+description: Ask CellScope to support a new battery / BMS (or fix how one is identified).
+title: "Battery support: <brand> <model>"
+labels: ["new-battery"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand CellScope! The app can fill most of this in for you —
+        on the scan screen tap **"Battery not listed? Help add it"** and it attaches the
+        Bluetooth fingerprint automatically. You can also fill it in by hand below.
+  - type: input
+    id: brand
+    attributes:
+      label: Brand
+      placeholder: e.g. Battle Born, SOK, Dakota Lithium
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: e.g. BB10012
+  - type: textarea
+    id: fingerprint
+    attributes:
+      label: Bluetooth fingerprint
+      description: Advertised services, device name, and manufacturer data. The app fills this automatically.
+      render: markdown
+      placeholder: |
+        - Name: ...
+        - ID: ...
+        - RSSI: ...
+        - Advertised services: ...
+        - Manufacturer data: ...
+  - type: input
+    id: official-app
+    attributes:
+      label: Official app (optional)
+      description: The vendor app's name or Play Store / APK link, if you know it.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: Anything else useful — cell count, chemistry, what works today, links.
+  - type: checkboxes
+    id: ownership
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is a battery I own or have permission to test.
+          required: true
