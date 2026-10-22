@@ -52,6 +52,9 @@
     <tr><td>JK / Jikong</td><td>JK-BMS</td></tr>
     <tr><td>Victron</td><td>SmartLithium, SmartShunt (Instant Readout)</td></tr>
   </table>
+  <p class="muted"><strong>Victron</strong> devices broadcast encrypted readings, so CellScope needs each device's
+    encryption key once: in VictronConnect, open the device, then Product info → Encryption key, and paste the key.
+    No pairing or connection is needed.</p>
   <div class="card">
     <p style="margin:0"><strong>Battery not listed?</strong> On the scan screen tap
       <strong>"Battery not listed? Help add it"</strong> — CellScope attaches the Bluetooth details for you —
@@ -62,11 +65,11 @@
 
   <h2>Troubleshooting</h2>
   <p><strong>My battery doesn't appear.</strong> A battery accepts only one Bluetooth connection at a time.
-    Close the manufacturer's app (and disconnect any other phone), then scan again. Make sure Bluetooth
+    Close the manufacturer's app (and disconnect any other phone), then scan again. Victron devices don't connect, so this doesn't apply to them. Make sure Bluetooth
     access is allowed for CellScope in Settings.</p>
   <p><strong>History is empty.</strong> Most batteries keep no log of their own, only lifetime totals.
     CellScope records history on your device while it's connected, so charts fill in over time.
-    Batteries that do keep a log (ECO) are imported automatically.</p>
+    Batteries that keep their own log (such as ECO) are imported automatically.</p>
   <p><strong>Health looks too high.</strong> The battery's own health figure is an estimate. For a measured
     value, run the capacity test on the Test tab: charge to full, then discharge with a steady load until the
     BMS cuts off.</p>
@@ -75,7 +78,7 @@
   <p>CellScope only reads your battery. The one exception: on batteries with a clock, it can set the time,
     and only when you tap to confirm.</p>
 
-  <footer>Not affiliated with JBD, ECO Battery or any battery manufacturer.</footer>
+  <footer>Not affiliated with any battery manufacturer.</footer>
 </main>
 </body>
 </html>
