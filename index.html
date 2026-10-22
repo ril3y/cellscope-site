@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CellScope Support</title>
+  <meta name="description" content="CellScope reads smart-BMS LiFePO4 batteries over Bluetooth. Help, supported batteries and contact.">
+  <link rel="icon" href="img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <img src="img/icon.png" alt="">
+    <div>
+      <h1>CellScope</h1>
+      <p class="sub">LiFePO4 Battery Monitor</p>
+    </div>
+  </header>
+  <nav><a href="./">Support</a><a href="privacy.html">Privacy</a></nav>
+
+  <p>CellScope connects to your smart-BMS lithium iron phosphate battery over Bluetooth and shows
+    what it's doing, readable at a glance even in bright sun: charge level, charge and discharge current,
+    time to full or empty, every cell's voltage, history, and battery health.</p>
+
+  <div class="shots">
+    <img src="img/1-panel.png" alt="Panel: state-of-charge gauge, current, voltage and temperatures">
+    <img src="img/2-cells.png" alt="Cells: each cell's voltage and difference from the average">
+    <img src="img/3-history.png" alt="History: state of charge and current over 7 days">
+  </div>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p style="margin:0">Questions, problems or a battery you'd like supported? Email
+      <a href="mailto:rileyporter@gmail.com?subject=CellScope">rileyporter@gmail.com</a>.
+      Include your battery brand and model and, if you can, a screenshot.</p>
+  </div>
+
+  <h2>Supported batteries</h2>
+  <table>
+    <tr><th>BMS</th><th>Status</th></tr>
+    <tr><td>JBD / Xiaoxiang (e.g. LOSSIGY)</td><td>Supported</td></tr>
+    <tr><td>ECO Battery</td><td>Supported</td></tr>
+    <tr><td>Daly, JK / Jikong, Renogy</td><td class="muted">Planned</td></tr>
+  </table>
+  <p class="muted">No battery to hand? Open the <strong>demo battery</strong> on the scan screen to try every feature.</p>
+
+  <h2>Troubleshooting</h2>
+  <p><strong>My battery doesn't appear.</strong> A battery accepts only one Bluetooth connection at a time.
+    Close the manufacturer's app (and disconnect any other phone), then scan again. Make sure Bluetooth
+    access is allowed for CellScope in Settings.</p>
+  <p><strong>History is empty.</strong> Most batteries keep no log of their own, only lifetime totals.
+    CellScope records history on your device while it's connected, so charts fill in over time.
+    Batteries that do keep a log (ECO) are imported automatically.</p>
+  <p><strong>Health looks too high.</strong> The battery's own health figure is an estimate. For a measured
+    value, run the capacity test on the Test tab: charge to full, then discharge with a steady load until the
+    BMS cuts off.</p>
+
+  <h2>Does CellScope change my battery?</h2>
+  <p>CellScope only reads your battery. The one exception: on batteries with a clock, it can set the time,
+    and only when you tap to confirm.</p>
+
+  <footer>Not affiliated with JBD, ECO Battery or any battery manufacturer.</footer>
+</main>
+</body>
+</html>
